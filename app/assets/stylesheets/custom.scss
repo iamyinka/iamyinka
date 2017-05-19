@@ -20,15 +20,6 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
-.header-content h1 {
-	overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0 solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  animation: 
-    typing 5.0s steps(60, end),
-    blink-caret .75s step-end infinite;
-}
-
 .header-section p {
 	overflow: auto; /* Ensures the content is not revealed until the animation */
   border-right: 0 solid orange; /* The typwriter cursor */
