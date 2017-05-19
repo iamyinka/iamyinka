@@ -1,0 +1,19 @@
+<%= provide(:title, "Hire Yinka") -%>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3 contact-form">
+		<h2 class="text-center" style="color: #fff;">Hire Yinka</h2>
+		<div class="well">
+			
+			<%= bootstrap_form_for(@contact) do |f| %>
+			  <%= f.text_field :name, label: "Your Name", placeholder: "e.g Yinka Ash"%>
+			  <%= f.email_field :email, label: "Email address", placeholder: "e.g good-email@iamyinka.com" %>
+			  <%= f.phone_field :phone, label: "Telephone number", placeholder: "e.g +60102000001" %>
+			  <%= f.number_field :budget, prepend: "$ / RM", label: "Your Budget", placeholder: "e.g 4000 (Numbers only)" %>
+			  <%= f.select :startdate, ["Within 1 Week","1 - 2 Weeks","2 - 4 Weeks","1 - 2 Months","2 - 3 Months","3+ Months","Not Sure"], { label: "Your ideal start date" }, { class: "selectpicker" } %>
+			  <%= f.text_area :description, label: "Project Description", rows: '10', placeholder: "Please briefly describe your project, what you aim to achieve, what you'd like me to do, and link to any appropriate materials" %>
+			  <%= f.submit "Send Message", class: "btn btn-custom btn-lg" %>
+			<% end %>
+		</div>
+	</div>
+</div>

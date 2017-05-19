@@ -13,8 +13,9 @@ Rails.application.routes.draw do
     :registration => 'register',
     :sign_up => 'blog-with-yinka' }
 
-
+  get 'hire', to: 'contacts#new'
   
+  resources :contacts, only: [:new, :create], :path => "hire"
 
   resources :articles do
     resources :comments

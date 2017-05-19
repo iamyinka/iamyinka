@@ -20,7 +20,7 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-          	<li class="specialBtn"><a href="#contact">Hire Yinka</a></li>
+          	<li class="<%= current_page?(hire_path) ? "active" : "" %> specialBtn"><%= link_to "Hire Yinka", hire_path %></li>
               <li class="<%= current_page?(articles_path) ? "active" : "" %>"><%= link_to "Blog", articles_path %></li>
             <!-- end -->
             
