@@ -3,15 +3,18 @@ Rails.application.routes.draw do
       sessions: 'users/sessions',
       passwords: 'users/passwords',
       registrations: 'users/registrations'
-  }, :path => "blog",
-  	:path_names => {
-    :sign_in => 'login',
-    :sign_out => 'logout',
-    :password => 'secret',
-    :confirmation => 'verification',
-    :unlock => 'unblock',
-    :registration => 'register',
-    :sign_up => 'blog-with-yinka' }
+  }
+
+
+  # , :path => "blog",
+  # 	:path_names => {
+  #   :sign_in => 'login',
+  #   :sign_out => 'logout',
+  #   :password => 'secret',
+  #   :confirmation => 'verification',
+  #   :unlock => 'unblock',
+  #   :registration => 'register',
+  #   :sign_up => 'blog-with-yinka' }
 
   resources :articles do
     resources :comments
