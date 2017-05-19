@@ -1,0 +1,49 @@
+<body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to root_path, class:"navbar-brand" do %>
+            <i class="fa fa-usd"><strong>i_am = "Yinka Ash"</strong></i>
+          <% end -%>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="<%= current_page?(root_path) ? "active" : "" %>"><%= link_to "Home", root_path %></li>
+            <li class="<%= current_page?(services_path) ? "active" : "" %>"><%= link_to "Services", services_path %></li>
+            <li class="<%= current_page?(about_path) ? "active" : "" %>"><%= link_to "About", about_path %></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="specialBtn"><a href="#contact">Hire Yinka</a></li>
+            <!-- If user Signed In -->
+             <li class="<%= current_page?(posts_path) ? "active" : "" %>"><%= link_to "WebLog", posts_path  %></li>
+            <!-- Else  -->
+              <li class="<%= current_page?(weblog_path) ? "active" : "" %>"><%= link_to "Blog", weblog_path %></li>
+            <!-- End -->
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <section class="page-heading">
+      <div class="container">
+      <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "flash alert alert-#{key}" %>
+      <% end %>
+        <%= yield %>
+      </div>
+    </section>
+
+    <footer>
+    <hr>
+   <div class="container">
+     <p class="text-center">&copy; 2017. Creative Design By: <%= link_to "Yinka Ash", 'http://iamyinka.com', title: "Yinka's Website", class: "btn btn-link" %></p>
+   </div> 
+  </footer>
+  </body>

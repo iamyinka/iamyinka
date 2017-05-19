@@ -1,0 +1,61 @@
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to root_path, class:"navbar-brand" do %>
+            <i class="fa fa-usd"><strong>i_am = "Yinka Ash"</strong></i>
+          <% end -%>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="<%= current_page?(root_path) ? "active" : "" %>"><%= link_to "Home", root_path %></li>
+            <li class="<%= current_page?(services_path) ? "active" : "" %>"><%= link_to "Services", services_path %></li>
+            <li class="<%= current_page?(about_path) ? "active" : "" %>"><%= link_to "About", about_path %></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+          	<li class="specialBtn"><a href="#contact">Hire Yinka</a></li>
+            <!-- If user Signed In -->
+             <li class="<%= current_page?(posts_path) ? "active" : "" %>"><%= link_to "WebLog", posts_path  %></li>
+            <!-- else -->
+              <li class="<%= current_page?(weblog_path) ? "active" : "" %>"><%= link_to "Blog", weblog_path %></li>
+            <!-- end -->
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <h1>I am Yinka Ashafa (a.k.a Ash)</h1>
+          <p><em>... A front &amp; back-end Web developer based in Kuala Lumpur, Malaysia. <br>
+          <span>UI Designer</span> by day &amp; <span>Developer</span> by night. I never sleep... almost.</em>
+          </p>
+          <%= link_to "Read More About Me >>", about_path, title: "Read More About Me", class: "btn btn-custom" %>
+          <%= link_to "Technologies I Use >>", services_path, title: "My Skill Set", class: "btn btn-custom" %>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </section>
+    
+  <footer>
+    <hr>
+   <div class="container">
+     <p class="text-center">&copy; 2017. Creative Design By: <%= link_to "Yinka Ash", 'http://iamyinka.com', title: "Yinka's Website", class: "btn btn-link" %></p>
+   </div> 
+  </footer>
+
+  </body>

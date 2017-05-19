@@ -2,13 +2,21 @@
 <html>
   <head>
     <title>Iamyinka</title>
-    <%= csrf_meta_tags %>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  
+  	<% if current_page?(root_path) %>
+	    <%= render 'layouts/static_pages' %>
+    <% elsif current_page?(services_path) || current_page?(about_path) -%>
+    	<%= render 'layouts/more_static' %>
+	  <% end %>
+    
+		
+
+	
 </html>
