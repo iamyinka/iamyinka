@@ -12,6 +12,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-weight: 300;
+	text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,14 +20,21 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
 }
 
-.header-section p {
+.header-content h1 {
 	overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0 solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .03em; /* Adjust as needed */
   animation: 
-    typing 4.0s steps(40, end),
+    typing 5.0s steps(60, end),
+    blink-caret .75s step-end infinite;
+}
+
+.header-section p {
+	overflow: auto; /* Ensures the content is not revealed until the animation */
+  border-right: 0 solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: 
+    typing 5.0s steps(60, end),
     blink-caret .75s step-end infinite;
 }
 
@@ -125,7 +133,7 @@ header {
 .header-content {
 	position: absolute;
 	top: 25%;
-	left: 20%;
+	left: 15%;
 	color: #fff;
 }
 
@@ -266,7 +274,12 @@ footer {
 }
 
 
+@media screen and (max-width: 767px) {
+	.navbar-default .navbar-nav > li > a {
+		text-align: center;
+	}
 
+}
 
 
 
