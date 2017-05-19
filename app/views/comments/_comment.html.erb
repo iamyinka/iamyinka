@@ -1,0 +1,17 @@
+ <div class="panel panel-default">
+  <div class="panel-body">
+      <p>Comment by: <small><strong><%= comment.user.firstname -%></strong> <%= time_ago_in_words(comment.created_at) -%> ago</small></p>
+        <%= comment.content %>
+
+   <% if user_signed_in? -%>
+    <% if comment.user_id == current_user.id -%>
+    <div class="blog-buttons">
+      <%= link_to "Edit Comment", edit_article_comment_path(comment.article, comment), class: "btn btn-warning btn-sm" %>
+     	 <%= link_to "Delete Comment", article_comment_path(comment.article, comment), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger btn-sm" %>
+    </div>
+
+    <% end -%>
+  <% end -%>
+  </div>
+   
+</div>

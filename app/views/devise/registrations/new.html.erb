@@ -1,0 +1,25 @@
+<h2 class="text-center">Sign up</h2>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="well">
+            <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              
+
+
+                <%= f.text_field :firstname, label: "First Name" %>
+                <%= f.text_field :lastname, label: "Last Name" %>
+                <%= f.text_field :username, label: "User Name" %>
+                <%= f.email_field :email, autofocus: true %>
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+                <%= f.password_field :password, autocomplete: "off" %>
+                <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                <%= f.submit "Sign up", class: "btn btn-success" %>
+            <% end %>
+
+            <%= render "devise/shared/links" %>
+        </div>      
+    </div>
+</div>

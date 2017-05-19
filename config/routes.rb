@@ -1,11 +1,22 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :users, controllers: {
+      sessions: 'users/sessions',
+      passwords: 'users/passwords',
+      registrations: 'users/registrations'
+  }, :path => "blog",
+  	:path_names => {
+    :sign_in => 'login',
+    :sign_out => 'logout',
+    :password => 'secret',
+    :confirmation => 'verification',
+    :unlock => 'unblock',
+    :registration => 'register',
+    :sign_up => 'blog-with-yinka' }
 
+  resources :articles do
+    resources :comments
+  end
 
-  resources :articles
-
-  get 'posts', to: 'static_pages#index'
-  get 'weblog', to: 'static_pages#index'
   get 'about', to: 'static_pages#about'
   get 'services', to: 'static_pages#services'
   root 'static_pages#index'

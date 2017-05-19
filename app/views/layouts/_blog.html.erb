@@ -24,7 +24,11 @@
             <li class="specialBtn"><a href="#contact">Hire Yinka</a></li>
             
 
-            <!-- IF USER & LINKS -->
+             <% if user_signed_in? -%>
+             <li><%= link_to "Log Out", destroy_user_session_path, method: :delete  %></li>
+            <% else -%>
+              <li class="<%= current_page?(articles_path) ? "active" : "" %>"><%= link_to "Blog", articles_path %></li>
+            <% end -%>
 
           </ul>
         </div><!--/.nav-collapse -->

@@ -1,0 +1,5 @@
+ <%= bootstrap_form_for ([@article, Comment.new]) do |f| %>
+  <%= f.text_area :content, label: "Post Comment", placeholder: "Post Comments Here...", rows: "10" %>
+  <%= f.submit class: "btn btn-success" %>
+  <%= link_to "Cancel", articles_path, class: "btn btn-danger" %>
+<% end -%>

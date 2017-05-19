@@ -21,10 +21,7 @@
 
           <ul class="nav navbar-nav navbar-right">
           	<li class="specialBtn"><a href="#contact">Hire Yinka</a></li>
-            <!-- If user Signed In -->
-             <li class="<%= current_page?(articles_path) ? "active" : "" %>"><%= link_to "WebLog", articles_path  %></li>
-            <!-- else -->
-              <li class="<%= current_page?(weblog_path) ? "active" : "" %>"><%= link_to "Blog", weblog_path %></li>
+              <li class="<%= current_page?(articles_path) ? "active" : "" %>"><%= link_to "Blog", articles_path %></li>
             <!-- end -->
             
           </ul>
