@@ -14,6 +14,8 @@
 	    <%= render 'layouts/static_pages' %>
     <% elsif current_page?(services_path) || current_page?(about_path) -%>
     	<%= render 'layouts/more_static' %>
+  	<% else -%>
+  		<%= render 'layouts/blog' %>
 	  <% end %>
     
 		

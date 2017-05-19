@@ -1,5 +1,6 @@
-  <body>
-    <nav class="navbar navbar-default">
+<body id="blog">
+
+  <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -20,42 +21,29 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-          	<li class="specialBtn"><a href="#contact">Hire Yinka</a></li>
-            <!-- If user Signed In -->
-             <li class="<%= current_page?(articles_path) ? "active" : "" %>"><%= link_to "WebLog", articles_path  %></li>
-            <!-- else -->
-              <li class="<%= current_page?(weblog_path) ? "active" : "" %>"><%= link_to "Blog", weblog_path %></li>
-            <!-- end -->
+            <li class="specialBtn"><a href="#contact">Hire Yinka</a></li>
             
+
+            <!-- IF USER & LINKS -->
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
-    <header>
-      <div class="container">
-        <div class="header-content">
-          <h1>I am Yinka Ashafa (a.k.a Ash)</h1>
-          <p><em>... A front &amp; back-end Web developer based in Kuala Lumpur, Malaysia. <br>
-          <span>UI Designer</span> by day &amp; <span>Developer</span> by night. I never sleep... almost.</em>
-          </p>
-          <%= link_to "Read More About Me >>", about_path, title: "Read More About Me", class: "btn btn-custom" %>
-          <%= link_to "Technologies I Use >>", services_path, title: "My Skill Set", class: "btn btn-custom" %>
-        </div>
-      </div>
-    </header>
-
-    <section>
-      <div class="container">
+   <section>
+     <div class="container">
+     <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "flash alert alert-#{key}" %>
+      <% end %>
         <%= yield %>
-      </div>
-    </section>
-    
-  <footer>
+     </div>
+   </section>
+
+    <footer>
     <hr>
    <div class="container">
      <p class="text-center">&copy; 2017. Creative Design By: <%= link_to "Yinka Ash", 'http://iamyinka.com', title: "Yinka's Website", class: "btn btn-link" %></p>
    </div> 
   </footer>
-
   </body>
