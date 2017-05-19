@@ -1,4 +1,4 @@
-
+<% provide(:title, 'Articles') %>
 <div class="row">
   <h2 class="text-center" style="color: #fff;">All Articles Listing... <%= link_to "Post A New Article", new_article_path, class: "btn btn-custom btn-lg" %></h2>
     <% if @articles.exists? -%>
