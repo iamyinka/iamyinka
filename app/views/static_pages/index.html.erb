@@ -24,26 +24,212 @@
 
 
 
+  
+
+
+
   <div class="col-md-6" id="portfolio">
     <h2 class="text-center">My Recent Works</h2>
     <div class="row">
-      <div class="col-md-6">
-      <%= image_tag 'project-01.png', alt: "Global EduTech Trading & Consultancy", class: "img-thumbnail" -%>
+      <div class="col-md-6 portfolio-item">
+        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                <div class="caption">
+                    <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                </div>
+                <%= image_tag 'project-01.png', alt: "Global EduTech Trading & Consultancy", class: "img-thumbnail img-responsive" -%>
+            </a>
       </div>
 
-      <div class="col-md-6">
-      <%= image_tag 'project-03.png', alt: "Wordpress Development", class: "img-thumbnail" -%>
+      <div class="col-md-6 portfolio-item">
+        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                <div class="caption">
+                    <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                </div>
+                <%= image_tag 'project-03.png', alt: "Wordpress Theme Development", class: "img-thumbnail img-responsive" -%>
+            </a>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-6">
-      <%= image_tag 'afro-project.png', alt: "Afro Asia Project", class: "img-thumbnail" -%>
+      <div class="col-md-6 portfolio-item">
+        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                <div class="caption">
+                    <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                </div>
+                <%= image_tag 'afro-project.png', alt: "Afro Asia Project", class: "img-thumbnail img-responsive" -%>
+            </a>
       </div>
 
-      <div class="col-md-6">
-      <%= image_tag 'mySite.png', alt: "I am Yinka App", class: "img-thumbnail" -%>
+      <div class="col-md-6 portfolio-item">
+        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                <div class="caption">
+                    <div class="caption-content">
+                        <i class="fa fa-search-plus fa-3x"></i>
+                    </div>
+                </div>
+                <%= image_tag 'mySite.png', alt: "I am Yinka App", class: "img-thumbnail img-responsive" -%>
+            </a>
       </div>
     </div>
   </div> 
 </div>
+
+
+<!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Global EduTech Trading &amp; Consultancy</h2>
+                            <hr class="star-primary">
+                            <%= image_tag 'project-01.png', alt: "Global EduTech Trading & Consultancy", class: "img-thumbnail img-responsive img-centered" -%>
+                            <p>This project was built using the rails framework. This project is built to replace the current company's website as an upgrade with solid back-end structure.</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="https://getc-app.herokuapp.com">GETC Kuala Lumpur</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="https://getc-app.herokuapp.com">March 2017</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://iamyinka.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Bootstrap To Wordpress</h2>
+                            <hr class="star-primary">
+                            <%= image_tag 'project-03a.png', alt: "Wordpress Theme Development", class: "img-thumbnail img-responsive img-centered" -%>
+
+                            <p>This is my first major PHP project as I'm fairly new to using this server-side language. So I figured I'd made a custom built Wordpress Theme</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="#">Personal</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="#">May 2017</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://iamyinka.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Afro Asia Global Sdn Bhd</h2>
+                            <hr class="star-primary">
+                            <%= image_tag 'project-02.png', alt: "Afro Asia Project", class: "img-thumbnail img-responsive img-centered" -%>
+
+                            <p>This project was solely based on the PHP wordpress development. Built this page using a wordpress template.</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://afroasia.com.my">Afro Asia Global Sdn Bhd</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://afroasia.com.my">September 2016</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://iamyinka.com">Web Design</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>My Portfolio Site</h2>
+                            <hr class="star-primary">
+                            <%= image_tag 'mySite.png', alt: "I am Yinka App", class: "img-thumbnail img-responsive img-centered" -%>
+
+                            <p>Figured its time I built my own personal portfolio app and this app is running on my preferred rails framework.</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://iamyinka.com">Yinka Ash</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://iamyinka.com">May 2017</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://iamyinka.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
