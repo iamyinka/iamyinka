@@ -11,7 +11,6 @@ gem 'rails', '~> 5.0.3'
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
-gem 'bootstrap-wysihtml5-rails'
 gem 'devise', '~> 4.2'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'will_paginate-bootstrap', '~> 1.0'
