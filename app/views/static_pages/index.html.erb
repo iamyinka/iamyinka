@@ -9,7 +9,7 @@
           <h3 class="panel-title"><%= article.title %></h3>
         </div>
         <div class="panel-body">
-          <p> <%= article.description.truncate(100) %>
+          <p> <%= raw(article.description.truncate(100)) %>
           <%= link_to "Read More >>", article_path(article), title: "Read more about this post", class: "btn btn-link" %>
           </p>
           
