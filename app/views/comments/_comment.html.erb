@@ -1,7 +1,7 @@
  <div class="panel panel-default">
   <div class="panel-body">
       <p>Comment by: <small><strong><%= comment.user.firstname -%></strong> <%= time_ago_in_words(comment.created_at) -%> ago</small></p>
-        <%= comment.content %>
+        <%= raw (comment.content) %>
 
    <% if user_signed_in? -%>
     <% if comment.user_id == current_user.id -%>

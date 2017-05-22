@@ -6,7 +6,7 @@
               <h3 class="panel-title"><%= @article.title -%></h3>
             </div>
             <div class="panel-body">
-              <%= @article.description -%>
+              <%= raw (@article.description) -%>
             </div>
           </div>
 
@@ -27,12 +27,12 @@
 
    
     <div class="col-md-6">
-    
-      <%= render 'comments/form' %>
+      
+      <%= render 'comments/form'%>
    
       <div class="comments">
       <hr>
-      <h3>Comments</h3>
+      <h3>Comments(<%= @article.comments.count -%>)</h3>
 
       <%= render @article.comments %>
       
