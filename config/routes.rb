@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   devise_for :users, controllers: {
       sessions: 'users/sessions',
       passwords: 'users/passwords',
@@ -23,6 +24,9 @@ Rails.application.routes.draw do
 
   get 'about', to: 'static_pages#about'
   get 'services', to: 'static_pages#services'
+
+
   root 'static_pages#index'
+
 
 end
