@@ -1,32 +1,49 @@
 <% provide(:title, 'Articles') %>
+
+
 <div class="row">
-  <h2 class="text-center" style="color: #fff;">All Articles Listing... <%= link_to "Post A New Article", new_article_path, class: "btn btn-custom btn-lg" %></h2>
-    <% if @articles.exists? -%>
-      <% @articles.each_slice(2) do |article| %>
-        
-          <div class="col-md-6">
-            <% article.each do |article| %>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h3 class="panel-title"><%= article.title %></h3>
-                </div>
-                <div class="panel-body">
-                 <p> <%= raw(article.description.truncate(100)) %>
-                  <%= link_to "Read More >>", article_path(article), title: "Read more about this post", class: "btn btn-link" %>
-                  </p>
-                  
-                </div>
-                <div class="panel-footer"><small>Posted <%= time_ago_in_words(article.created_at) -%> ago by: <strong><%= article.user.firstname -%></strong></small>     
-                </div>
-              </div>
-            <% end -%>
+  <div class="col-sm-12">
+    <h2 class="text-center" style="color: #fff;">All Articles Listing... <%= link_to "Post A New Article", new_article_path, class: "btn btn-custom btn-lg" %></h2>
+  </div>
+</div>
+
+
+ <% @articles.each_slice(2) do |articles| %>
+  
+
+      <div class="row">
+      <% articles.each do |article| %>
+        <div class="col-md-6">
+            
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= article.title %></h3>
+            </div>
+
+            <div class="panel-body">
+              <%= raw(article.description.truncate(100)) %>
+                <%= link_to "Read More >>", article_path(article), title: "Read more about this post", class: "btn btn-link" %>
+            </div><!-- end panel-body -->
+
+            <div class="panel-footer"><small>Posted <%= time_ago_in_words(article.created_at) -%> ago by: <strong><%= article.user.firstname -%></strong></small>     
+            </div>
           </div>
-          <% end -%>
+
+         </div>
+<% end %>
       </div>
     
-    <% else -%>
-    <p>No post to show</p>
-    <% end -%>  
+  <% end %>
+
+
+
+
+
+
+
+
+    
+    
     
     <div class="text-center paginate">
       <nav aria-label="Page navigation">

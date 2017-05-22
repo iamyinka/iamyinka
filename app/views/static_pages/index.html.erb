@@ -1,32 +1,37 @@
 <% provide(:title, 'Welcome') %>
+
 <div class="row">
-  <% @articles.each_slice(2) do |article| %>
+
     <div class="col-md-6">
-      <h2 class="text-center">Latest From My Blog</h2>
-      <% article.each do |article| %>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title"><%= article.title %></h3>
-        </div>
-        <div class="panel-body">
-          <p> <%= raw(article.description.truncate(100)) %>
-          <%= link_to "Read More >>", article_path(article), title: "Read more about this post", class: "btn btn-link" %>
-          </p>
-          
-        </div>
-        <div class="panel-footer"><small>Posted <%= time_ago_in_words(article.created_at) -%> ago by: <strong><%= article.user.firstname -%></strong></div>
-      </div>
-      <% end -%>
-    <% end -%>
-      </div>
+        <h2 class="text-center">Latest From My Blog</h2>
 
-
-
-
-
+        <% @articles.each_slice(2) do |articles| %>
   
 
+      <div class="row">
+      <% articles.each do |article| %>
+        <div class="col-md-12">
+            
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= article.title %></h3>
+            </div>
 
+            <div class="panel-body">
+              <%= raw(article.description.truncate(100)) %>
+                <%= link_to "Read More >>", article_path(article), title: "Read more about this post", class: "btn btn-link" %>
+            </div><!-- end panel-body -->
+
+            <div class="panel-footer"><small>Posted <%= time_ago_in_words(article.created_at) -%> ago by: <strong><%= article.user.firstname -%></strong></small>     
+            </div>
+          </div>
+
+         </div>
+      <% end %>
+      </div>
+    
+  <% end %>
+    </div>
 
   <div class="col-md-6" id="portfolio">
     <h2 class="text-center">My Recent Works</h2>
@@ -78,8 +83,10 @@
       </div>
     </div>
   </div> 
+
 </div>
 
+</div>
 
 <!-- Portfolio Modals -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
