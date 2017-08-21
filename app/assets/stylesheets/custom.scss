@@ -101,9 +101,9 @@ nav.navbar.navbar-default {
 }
 
 header {
-	background: linear-gradient(to bottom, rgba(6,1,8, 0.3), rgba(6,1,8, 0.6)), image-url('background.jpg') no-repeat top center;
+	background: linear-gradient(to bottom, rgba(6,1,8, 0.3), rgba(6,1,8, 0.6)), url(background.jpg) no-repeat top center;
 	height: 100vh;
-	width: 100vw;
+	min-width: 100%;
 	position: relative;
 	background-attachment: fixed;
 }
